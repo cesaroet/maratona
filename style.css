@@ -216,6 +216,7 @@ td.expense {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  z-index: 999;
 }
 
 .modal-overlay.active {
@@ -229,6 +230,8 @@ td.expense {
   /*para limitar a caixa*/
   width: 90%;
   max-width: 500px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Form ========== */

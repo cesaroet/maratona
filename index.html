@@ -27,7 +27,7 @@
           <img src="./assets/income.svg" alt="Entrada">
         </h3>
 
-        <p>R$ 5.000,00</p>
+        <p id="incomeDisplay"></p>
       </div>
 
       <div class="card">
@@ -35,7 +35,7 @@
           <span>Saídas</span>
         <img src="./assets/expense.svg" alt="Saidas">
       </h3>
-        <p>R$ 200</p>
+        <p id="expenseDisplay"></p>
       </div>
 
       <div class="card total">
@@ -43,7 +43,7 @@
           <span>Total</span>
         <img src="./assets/total.svg" alt="Total">
       </h3>
-        <p>R$ 3000</p>
+        <p id="totalDisplay"></p>
       </div>
     </section>
 
@@ -64,22 +64,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="description">Perca</td>
-            <td class="expense">- R$ 500,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="./assets/minus.svg" alt="">
-            </td>
-          </tr>
-          <tr>
-            <td class="description">Ganho</td>
-            <td class="income">R$ 500,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="./assets/minus.svg" alt="">
-            </td>
-          </tr>
+
         </tbody>
       </table>
     </section>
@@ -90,7 +75,7 @@
     <div class="modal">
       <div id="form">
         <h2>Nova Transação</h2>
-        <form action="">
+        <form action="" onsubmit="Form.submit(event)">
 
           <div class="input-group">
             <label class="sr-only"
@@ -104,12 +89,12 @@
 
           <div class="input-group">
             <label class="sr-only"
-            for="amaunt">Valor</label>
+            for="amount">Valor</label>
             <input 
             type="number"
             step="0.01" 
-            id="amaunt" 
-            name="amaunt" 
+            id="amount" 
+            name="amount" 
             placeholder="0,00"/>
 
 
@@ -142,21 +127,7 @@
     <p>dev.finance$</p>
   </footer>
 
-  <script>
-    const Modal = {
-      open(){
-        document
-        .querySelector('.modal-overlay')
-        .classList
-        .add('active')
-      },
-      close() {
-        document
-        .querySelector('.modal-overlay')
-        .classList.remove('active')
-      }
-    } 
-  </script>
+<script src="./scripts.js"></script>
 </body>
 
 </html>
